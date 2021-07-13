@@ -1,286 +1,378 @@
 const initState = {
-    datas:[],
+    datas: [],
     datas_detail: [],
     question: [
         {
-            q : "Jenis Kelamin",
-            o : [
+            q: "Jenis Kelamin",
+            o: [
                 {
-                    o : "Laki - laki"
+                    q: "1",
+                    o: "Laki - laki"
                 },
                 {
-                    o : "Perempuan"
+                    q: "1",
+                    o: "Perempuan"
                 }
             ]
-        },{
-            q : "Usia",
-            o : [
+        }, {
+            q: "Usia",
+            o: [
                 {
-                    o : "Dibawah 18 tahun"
+                    q: "2",
+                    o: "Dibawah 18 tahun"
                 },
                 {
-                    o : "18 - 24 tahun"
+                    q: "2",
+                    o: "18 - 24 tahun"
                 },
                 {
-                    o : "25 - 34 tahun"
+                    q: "2",
+                    o: "25 - 34 tahun"
                 },
                 {
-                    o : "35 - 59 tahun"
+                    q: "2",
+                    o: "35 - 59 tahun"
                 },
                 {
-                    o : "60 tahun keatas"
+                    q: "2",
+                    o: "60 tahun keatas"
                 }
             ]
-        },{
-            q : "Pendidikan Terakhir",
-            o : [
+        }, {
+            q: "Pendidikan Terakhir",
+            o: [
                 {
-                    o : "SD"
+                    q: "3",
+                    o: "SD"
                 },
                 {
-                    o : "SMP"
+                    q: "3",
+                    o: "SMP"
                 },
                 {
-                    o : "SMA / SMK"
+                    q: "3",
+                    o: "SMA / SMK"
                 },
                 {
-                    o : "Diploma"
+                    q: "3",
+                    o: "Diploma"
                 },
                 {
-                    o : "Sarjana (S1)"
+                    q: "3",
+                    o: "Sarjana (S1)"
                 },
                 {
-                    o : "Pasca Sarjana (S2 / S3)"
+                    q: "3",
+                    o: "Pasca Sarjana (S2 / S3)"
                 }
             ]
-        },{
-            q : "Pekerjaan",
-            o : [
+        }, {
+            q: "Pekerjaan",
+            o: [
                 {
-                    o : "PNS"
+                    q: "4",
+                    o: "PNS"
                 },
                 {
-                    o : "TNI / POLRI"
+                    q: "4",
+                    o: "TNI / POLRI"
                 },
                 {
-                    o : "Karyawan BUMN"
+                    q: "4",
+                    o: "Karyawan BUMN"
                 },
                 {
-                    o : "Karyawan Swasta"
+                    q: "4",
+                    o: "Karyawan Swasta"
                 },
                 {
-                    o : "Wirausaha"
+                    q: "4",
+                    o: "Wirausaha"
                 },
                 {
-                    o : "Pelajar / Mahasiswa"
+                    q: "4",
+                    o: "Pelajar / Mahasiswa"
                 },
                 {
-                    o : "Belum Bekerja"
+                    q: "4",
+                    o: "Belum Bekerja"
                 },
                 {
-                    o : "Lain - lain"
+                    q: "4",
+                    o: "Lain - lain"
                 }
             ]
-        },{
-            q : "Jenis Layanan",
-            o : [
+        }, {
+            q: "Jenis Layanan",
+            o: [
                 {
-                    o : "DPMTK"
+                    q: "5",
+                    o: "DPMTK"
                 },
                 {
-                    o : "DUKCAPIL"
+                    q: "5",
+                    o: "DUKCAPIL"
                 },
                 {
-                    o : "KEMENAG"
+                    q: "5",
+                    o: "KEMENAG"
                 },
                 {
-                    o : "BPN"
+                    q: "5",
+                    o: "BPN"
                 },
                 {
-                    o : "BPJS KESEHATAN"
+                    q: "5",
+                    o: "BPJS KESEHATAN"
                 },
                 {
-                    o : "BPJS KETENAGAKERJAAN"
+                    q: "5",
+                    o: "BPJS KETENAGAKERJAAN"
                 },
                 {
-                    o : "KEJAKSAAN"
+                    q: "5",
+                    o: "KEJAKSAAN"
                 },
                 {
-                    o : "PENGADILAN NEGERI"
+                    q: "5",
+                    o: "PENGADILAN NEGERI"
                 },
                 {
-                    o : "KPP PRATAMA"
+                    q: "5",
+                    o: "KPP PRATAMA"
                 },
                 {
-                    o : "SAMSAT"
+                    q: "5",
+                    o: "SAMSAT"
                 },
                 {
-                    o : "POLRES SINGKAWANG"
+                    q: "5",
+                    o: "POLRES SINGKAWANG"
                 },
                 {
-                    o : "IMIGRASI"
+                    q: "5",
+                    o: "IMIGRASI"
                 },
                 {
-                    o : "BKD"
+                    q: "5",
+                    o: "BKD"
                 },
                 {
-                    o : "BANK KALBAR"
+                    q: "5",
+                    o: "BANK KALBAR"
                 },
                 {
-                    o : "BRI"
+                    q: "5",
+                    o: "BRI"
                 }
             ]
-        },{
-            q : "Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya?",
-            o : [
+        }, {
+            q: "Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya?",
+            o: [
                 {
-                    o : "Tidak Cepat"
+                    q: "6",
+                    o: "Tidak Cepat"
                 },
                 {
-                    o : "Kurang Cepat"
+                    q: "6",
+                    o: "Kurang Cepat"
                 },
                 {
-                    o : "Cepat"
+                    q: "6",
+                    o: "Cepat"
                 },
                 {
-                    o : "Sangat Cepat"
+                    q: "6",
+                    o: "Sangat Cepat"
                 }
             ]
-        },{
-            q : "Bagaimana pendapat saudara tentang kewajaran biaya / tarif dalam pelayanan (Khusus izin yang terdapat retribusi)",
-            o : [
+        }, {
+            q: "Bagaimana pendapat saudara tentang kewajaran biaya / tarif dalam pelayanan (Khusus izin yang terdapat retribusi)",
+            o: [
                 {
-                    o : "Tidak Sesuai"
+                    q: "7",
+                    o: "Tidak Sesuai"
                 },
                 {
-                    o : "Kurang Sesuai"
+                    q: "7",
+                    o: "Kurang Sesuai"
                 },
                 {
-                    o : "Sesuai"
+                    q: "7",
+                    o: "Sesuai"
                 },
                 {
-                    o : "Sangat Sesuai"
+                    q: "7",
+                    o: "Sangat Sesuai"
                 }
             ]
-        },{
-            q : "Bagaimana pendapat saudara tentang kompetensi / kemampuan petugas dalam pelayanan?",
-            o : [
+        }, {
+            q: "Bagaimana pendapat saudara tentang kompetensi / kemampuan petugas dalam pelayanan?",
+            o: [
                 {
-                    o : "Tidak Kompeten"
+                    q: "8",
+                    o: "Tidak Kompeten"
                 },
                 {
-                    o : "Kurang Kompeten"
+                    q: "8",
+                    o: "Kurang Kompeten"
                 },
                 {
-                    o : "Kompeten"
+                    q: "8",
+                    o: "Kompeten"
                 },
                 {
-                    o : "Sangat Kompeten"
+                    q: "8",
+                    o: "Sangat Kompeten"
                 }
             ]
-        },{
-            q : "Bagaimana pendapat saudara tentang perilaku petugas dalam pelayanan terkait kesopanan dan keramahan? ",
-            o : [
+        }, {
+            q: "Bagaimana pendapat saudara tentang perilaku petugas dalam pelayanan terkait kesopanan dan keramahan? ",
+            o: [
                 {
-                    o : "Tidak Sopan dan Ramah"
+                    q: "9",
+                    o: "Tidak Sopan dan Ramah"
                 },
                 {
-                    o : "Kurang Sopan"
+                    q: "9",
+                    o: "Kurang Sopan"
                 },
                 {
-                    o : "Sopan dan Ramah"
+                    q: "9",
+                    o: "Sopan dan Ramah"
                 },
                 {
-                    o : "Sangat Sopan dan Ramah"
-                }
-            ] 
-        },{
-            q : "Bagaimana pendapat saudara tentang kualitas sarana dan prasarana?",
-            o : [
-                {
-                    o : "Sangat Baik"
-                },
-                {
-                    o : "Cukup Baik"
-                },
-                {
-                    o : "Baik"
-                },
-                {
-                    o : "Buruk"
+                    q: "9",
+                    o: "Sangat Sopan dan Ramah"
                 }
             ]
-        },{
-            q : "Bagaimana pendapat saudara tentang penanganan pengaduan pengguna layanan?",
-            o : [
+        }, {
+            q: "Bagaimana pendapat saudara tentang kualitas sarana dan prasarana?",
+            o: [
                 {
-                    o : "Tidak Ada"
+                    q: "10",
+                    o: "Sangat Baik"
                 },
                 {
-                    o : "Ada Tetapi Tidak Berfungsi"
+                    q: "10",
+                    o: "Cukup Baik"
                 },
                 {
-                    o : "Berfungsi Kurang Maksimal"
+                    q: "10",
+                    o: "Baik"
                 },
                 {
-                    o : "Dikelola Bengan Baik"
+                    q: "10",
+                    o: "Buruk"
                 }
             ]
-        },{
-            q : "Bagaimana pemahaman Saudara tentang kemudahan prosedur pelayanan?",
-            o : [
+        }, {
+            q: "Bagaimana pendapat saudara tentang penanganan pengaduan pengguna layanan?",
+            o: [
                 {
-                    o : "Tidak Mudah"
+                    q: "11",
+                    o: "Tidak Ada"
                 },
                 {
-                    o : "Kurang Mudah"
+                    q: "11",
+                    o: "Ada Tetapi Tidak Berfungsi"
                 },
                 {
-                    o : "Mudah"
+                    q: "11",
+                    o: "Berfungsi Kurang Maksimal"
                 },
                 {
-                    o : "Sangat Mudah"
+                    q: "11",
+                    o: "Dikelola Bengan Baik"
                 }
             ]
-        },{
-            q : "Penilaian Kepuasan",
-            o : [
+        }, {
+            q: "Bagaimana pemahaman Saudara tentang kemudahan prosedur pelayanan?",
+            o: [
                 {
-                    o : "Sangat Puas"
+                    q: "12",
+                    o: "Tidak Mudah"
                 },
                 {
-                    o : "Cukup Puas"
+                    q: "12",
+                    o: "Kurang Mudah"
                 },
                 {
-                    o : "Puas"
+                    q: "12",
+                    o: "Mudah"
                 },
                 {
-                    o : "Tidak Puas"
+                    q: "12",
+                    o: "Sangat Mudah"
+                }
+            ]
+        }, {
+            q: "Penilaian Kepuasan",
+            o: [
+                {
+                    q: "13",
+                    o: "Sangat Puas"
                 },
                 {
-                    o : "Sangat Tidak Puas"
+                    q: "13",
+                    o: "Cukup Puas"
+                },
+                {
+                    q: "13",
+                    o: "Puas"
+                },
+                {
+                    q: "13",
+                    o: "Tidak Puas"
+                },
+                {
+                    q: "13",
+                    o: "Sangat Tidak Puas"
                 }
             ]
         }
-    ]
+    ],
+    answer: {
+        "1": '',
+        "2": '',
+        "3": '',
+        "4": '',
+        "5": '',
+        "6": '',
+        "7": '',
+        "8": '',
+        "9": '',
+        "10": '',
+        "11": '',
+        "12": '',
+        "13": ''
+    }
 }
 
 export default (state = initState, action) => {
-    switch(action.type){
-        case 'STORE_DATAS' : 
-            return{
+    switch (action.type) {
+        case 'STORE_DATAS':
+            return {
                 ...state,
                 datas: action.datas
             }
-        case 'STORE_DATAS_DETAIL' : 
-            return{
+        case 'STORE_DATAS_DETAIL':
+            return {
                 ...state,
                 datas_detail: action.datas
             }
-        case 'RESET_DETAIL' : 
-            return{
+        case 'RESET_DETAIL':
+            return {
                 ...state,
                 datas_detail: []
+            }
+        case  'STORE_ANSWER':
+            return{
+                ...state,
+                answer : {
+                    ...state.answer,
+                    [action.datas.id] : action.datas.ans
+                } 
             }
         default:
             return state

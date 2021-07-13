@@ -1,8 +1,12 @@
 import React from 'react';
 import { connect } from "react-redux";
-import './../style/style.css'
+import './../style/style.css';
+import { storeAnswerF } from './../../store/app/action';
 
-function Questionpage({ question }) {
+
+import checkSVG from './../assets/img/check.svg';
+
+function Questionpage({ question, answer, storeAnswerF }) {
     const [i, setI] = React.useState(0)
     const [color, setColor] = React.useState('#f368e0')
 
@@ -26,6 +30,15 @@ function Questionpage({ question }) {
         }
     }
 
+    const storeAnswer = (id, ans) => {
+        const payload = {
+            id,
+            ans
+        }
+        storeAnswerF(payload)
+        console.log(answer)
+    }
+
     return (
         <div className="q-container" >
 
@@ -46,7 +59,7 @@ function Questionpage({ question }) {
             </div>
             <div className="option">
                 {question[i].o.map((opt, i) =>
-                    <div>{opt.o}</div>
+                    <div className={answer[opt.q] === opt.o ? "selected" : "noselected"} onClick={() => storeAnswer(opt.q, opt.o)}>{opt.o} </div>
                 )}
             </div>
             <div className="footer">
@@ -66,13 +79,14 @@ function Questionpage({ question }) {
 
 const mapStateToProps = ({ app }) => {
     return {
-        question: app.question
+        question: app.question,
+        answer: app.answer
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-
+        storeAnswerF : payload => dispatch(storeAnswerF(payload))
     }
 };
 
