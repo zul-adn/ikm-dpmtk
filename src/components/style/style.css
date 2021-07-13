@@ -70,7 +70,7 @@ body {
 
 .option div:hover{
     transform: scale(1.005);
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 184, 148, 0.8);
 }
 
 .selected{
