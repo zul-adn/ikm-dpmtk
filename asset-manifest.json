@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ikm-dpmtk/static/css/main.1167d20a.chunk.css",
+    "main.css": "/ikm-dpmtk/static/css/main.3576987f.chunk.css",
     "main.js": "/ikm-dpmtk/static/js/main.06bf0280.chunk.js",
     "main.js.map": "/ikm-dpmtk/static/js/main.06bf0280.chunk.js.map",
     "runtime-main.js": "/ikm-dpmtk/static/js/runtime-main.25ef3df9.js",
@@ -10,7 +10,7 @@
     "static/js/3.af72005d.chunk.js": "/ikm-dpmtk/static/js/3.af72005d.chunk.js",
     "static/js/3.af72005d.chunk.js.map": "/ikm-dpmtk/static/js/3.af72005d.chunk.js.map",
     "index.html": "/ikm-dpmtk/index.html",
-    "static/css/main.1167d20a.chunk.css.map": "/ikm-dpmtk/static/css/main.1167d20a.chunk.css.map",
+    "static/css/main.3576987f.chunk.css.map": "/ikm-dpmtk/static/css/main.3576987f.chunk.css.map",
     "static/js/2.d277c209.chunk.js.LICENSE.txt": "/ikm-dpmtk/static/js/2.d277c209.chunk.js.LICENSE.txt",
     "static/media/check.52364d06.svg": "/ikm-dpmtk/static/media/check.52364d06.svg",
     "static/media/logo.6ce24c58.svg": "/ikm-dpmtk/static/media/logo.6ce24c58.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.25ef3df9.js",
     "static/js/2.d277c209.chunk.js",
-    "static/css/main.1167d20a.chunk.css",
+    "static/css/main.3576987f.chunk.css",
     "static/js/main.06bf0280.chunk.js"
   ]
 }
