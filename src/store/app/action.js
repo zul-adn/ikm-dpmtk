@@ -1,4 +1,6 @@
-import axios from 'axios'
+import axios from 'axios';
+
+const apidev = 'http://127.0.0.1:8000/api'
 
 const storeDatas = (payload) => ({ type : 'STORE_DATAS', datas: payload }) 
 const storeDatasDetail = (payload) => ({type: 'STORE_DATAS_DETAIL', datas: payload})
@@ -11,3 +13,14 @@ export const storeAnswerF = (payload) => {
         dispatch(storeAnswer(payload))
     }
 }  
+
+export const submitIkm = (payload) => {
+    
+    return (dispatch, getState) => {
+        const ans =  getState().app.answer
+        axios.post(`${apidev}/createikm`, ans)
+        .then( response => {
+            console.log(response)
+        })  
+    }
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from "react-redux";
 import './../style/style.css';
-import { storeAnswerF } from './../../store/app/action';
+import { storeAnswerF, submitIkm } from './../../store/app/action';
 
 
 import checkSVG from './../assets/img/check.svg';
 
-function Questionpage({ question, answer, storeAnswerF }) {
+function Questionpage({ question, answer, storeAnswerF, submitIkm }) {
     const [i, setI] = React.useState(0)
     const [color, setColor] = React.useState('#f368e0')
 
@@ -14,6 +14,7 @@ function Questionpage({ question, answer, storeAnswerF }) {
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         if (i === question.length - 1) {
             alert("Last")
+            submitIkm(answer)
         } else {
             setI(i + 1)
             setColor(`#${randomColor}`)
@@ -37,6 +38,7 @@ function Questionpage({ question, answer, storeAnswerF }) {
         }
         storeAnswerF(payload)
         console.log(answer)
+        next()
     }
 
     return (
@@ -86,7 +88,8 @@ const mapStateToProps = ({ app }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        storeAnswerF : payload => dispatch(storeAnswerF(payload))
+        storeAnswerF : payload => dispatch(storeAnswerF(payload)),
+        submitIkm : payload => dispatch(submitIkm(payload))
     }
 };
 
