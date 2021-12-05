@@ -2,9 +2,11 @@ import React from 'react';
 import { connect } from "react-redux";
 import './../style/style.css';
 import { storeAnswerF, submitIkm } from './../../store/app/action';
-
-
 import checkSVG from './../assets/img/check.svg';
+import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
+
+const mySwal = withReactContent(Swal)
 
 function Questionpage({ question, answer, storeAnswerF, submitIkm }) {
     const [i, setI] = React.useState(0)
@@ -13,7 +15,13 @@ function Questionpage({ question, answer, storeAnswerF, submitIkm }) {
     const next = () => {
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         if (i === question.length - 1) {
-            alert("Last")
+            mySwal.fire({
+                icon: 'success',
+                title: 'Terima Kasih!',
+                text: 'Survey sudah kami terima.'
+            }).then(() => {
+                window.location = "https://portalmpp.dinartech.com"
+            })
             submitIkm(answer)
         } else {
             setI(i + 1)
@@ -24,7 +32,11 @@ function Questionpage({ question, answer, storeAnswerF, submitIkm }) {
     const prev = () => {
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         if (i === 0) {
-            alert("limit")
+            mySwal.fire({
+                icon: 'warning',
+                title: 'Peringatan',
+                text: 'Anda berada di halaman pertama.'
+            })
         } else {
             setI(i - 1)
             setColor(`#${randomColor}`)
